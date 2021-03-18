@@ -1,0 +1,1 @@
+$ tsc nameFile.ts --watch
