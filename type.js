@@ -36,11 +36,11 @@ var tupleTest = ['khanh', 43, 'noi'];
 console.log(tupleTest);
 //--Any  - là bất kì cái gì -> khia bao obj
 var test;
-x = 'test kn';
-console.log(x);
-x = ['hihi', 0101, 'vl', 11];
-console.log(x);
-x = {
+test = 'test kn';
+console.log(test);
+test = ['hihi', 0101, 'vl', 11];
+console.log(test);
+test = {
     key: "value",
     key2: "value2",
     obj1: {
@@ -48,7 +48,7 @@ x = {
         key2: "value2"
     }
 };
-console.log(x);
+console.log(test);
 //--Void  - ko tra ve gia tri
 function calcSomeThing() {
     console.log("Calculating..........");
@@ -56,3 +56,14 @@ function calcSomeThing() {
     // is not assignable to type 'void'.
 }
 calcSomeThing();
+//-- Ép kiểu ??? -> đê nó gợi ý code :v
+var type1;
+type1 = ' type 1 TS xxxxxxx';
+console.log(type1.length);
+//not number -> string dc
+//Not string -> number dc
+//Chia kieu any
+var strNum = 10;
+console.log(strNum + 10);
+// console.log((<string>strNum) + 10);
+// console.log( (strNum as string) + 10);
