@@ -111,3 +111,68 @@ let shen2 = new Hero('shen2');
 console.log(shen2.getName())
 shen2.setName('SHenNoi');
 console.log(shen2.getName())
+
+//--Generic trong class
+class Calc {
+    static show<T>(x : T[]): void {
+        console.log(x)
+    }
+}
+
+Calc.show<string>(['1','ss','adfsdf'])
+Calc.show<any>([1000,'ss','adfsdf'])
+
+//--interface
+console.log('--interface  type')
+
+interface person {
+    name: string,
+    age?: number
+}
+
+function showDescripton(onePerson: person ):void {
+    console.log(`${onePerson.name} : ${onePerson.age}`)
+}
+
+showDescripton({name:"khanh",age:22})
+//--interface Class => class dc tao ra tu interface -> tối thiếu phải có đủ thuốc tích và các hàm
+console.log('--interface  class => implements')
+
+interface ChampionInterface {
+    name: String;
+    heal: Number;
+    dame: Number;
+
+    show():void ;
+    skill(heal: number) :any ;
+    bReturn(): void;
+}
+
+class Tuong implements ChampionInterface {
+    name: String;
+    heal: Number;
+    dame: Number;
+
+    show():void {
+        console.log('show')
+    }
+    skill(heal: number) :any {
+        return 10
+    }
+    bReturn(): void {
+        console.log('B ve')
+    }
+}
+
+//-- Name space
+
+module Android {
+    export class String {
+
+    }
+    class Number {
+
+    }
+}
+
+let xiaomi = new Android.String();
